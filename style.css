@@ -3,10 +3,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+    padding:40px;
 }
 
 .promo-title {
@@ -22,6 +24,7 @@ body {
     border: 2px solid #3c366b !important;
     color: #3c366b !important;
     background: none !important;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -228,4 +231,51 @@ h2 {
 .award p:first-of-type {
 
     margin-top: 30px;
+}
+@media (max-width: 768px) {
+    /* Adjusting title font size and alignment */
+    .promo-title {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    /* Center titles on smaller screens */
+    .title {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    /* Reducing padding for sections */
+    body {
+        padding: 20px;
+    }
+
+    #tribute-info, #movies, .poster, #row, #info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Width adjustments */
+    #tribute-info p, #movies-left, #movies-right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Setting flexible poster width */
+    .poster {
+        width: 90%;
+        margin: 10px;
+    }
+
+    /* Adjusting image and text layout */
+    #tribute-info img, .poster img, .award img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Adjust award section width */
+    .award {
+        width: 80%;
+        padding: 15px;
+    }
 }
